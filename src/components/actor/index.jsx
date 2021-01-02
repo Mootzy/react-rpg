@@ -1,16 +1,12 @@
 import React from "react";
-import Sprite from "./components/sprite"
+import Sprite from "../sprite"
+
+export default function Actor({sprite, data, step = 0}) {
 
 
 
-//document.addEventListener
-export default function App() {
 
-  
-  
-  return (  
-  <div className="zone-container">
-    <Sprite 
+<Sprite 
       image={"/sprites/skins/m1.png"} 
         data={{
           x: 0,
@@ -20,6 +16,5 @@ export default function App() {
         }}
         onKeyPress={handleKeyPress}
          />
-  </div>
-  );
+
 }
