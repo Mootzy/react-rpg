@@ -1,20 +1,29 @@
 import React from "react";
 import Sprite from "../sprite"
 
-export default function Actor({sprite, data, step = 0}) {
 
 
 
+export default function Actor({
+  sprite,
+  data, 
+  position ={x: 0, y: 0},
+  step = 0, 
+  dir = 0
+}) {
+const {h, w} = data;
+
+  return(
 
 <Sprite 
-      image={"/sprites/skins/m1.png"} 
+      image={sprite} 
         data={{
-          x: 0,
-          y: 0,
-          h: 32,
-          w: 32
+          x: step * w,
+          y: step * h,
+          h,
+          w,
         }}
-        onKeyPress={handleKeyPress}
+        
          />
-
+  );
 }
