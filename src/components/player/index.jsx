@@ -6,7 +6,7 @@ import useWalk from "../../hooks/use-walk";
 
 export default function Player({skin}) {
     const { dir, step, walk, position} = useWalk(3)
-    
+
     const data = {
         h: 32,
         w: 32,
@@ -15,10 +15,12 @@ export default function Player({skin}) {
 
       useKeyPress((e) => {
           
-         
-          
-          walk(e.key.replace("Arrow", "").toLowerCase());
+       
+        walk(e.key.replace("Arrow", "").toLowerCase());
+        //if(directions.hasOwnProperty(dir)) console.dir(dir);
+          //walk(e.key.replace("Arrow", "").toLowerCase());
           e.preventDefault()
+          //walk(dir)
 
       });
       
@@ -28,7 +30,11 @@ export default function Player({skin}) {
     data={data}
     step={step}
     dir={dir}
-    position={position} 
+    position={position}
+    style={{
+        position: "absolute",
+    }}
+    
     />
     )
 }
