@@ -7,6 +7,7 @@ import React from "react"
 
 
     return ( 
+
         <div 
             style={{
                 ...style,
@@ -19,7 +20,6 @@ import React from "react"
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: `-${x}px -${y}px`
         }}
-
             />
         )
     }
